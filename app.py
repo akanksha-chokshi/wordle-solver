@@ -24,12 +24,12 @@ if submit:
 
 if guessword:
     if guessword not in possible_solutions:
-    st.markdown("Sorry, your word is invalid. Please enter a valid word. ")
-    guessword=""
-else:
-    st.markdown("Your Word Is: " + guessword)
-    st.markdown("Number of Guesses: " + str(guesses))
-    st.markdown(" ")
+        st.markdown("Sorry, your word is invalid. Please enter a valid word. ")
+        guessword=""
+    else:
+        st.markdown("Your Word Is: " + guessword)
+        st.markdown("Number of Guesses: " + str(guesses))
+        st.markdown(" ")
 
 solutions = []
 
