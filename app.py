@@ -22,6 +22,7 @@ words = possible_solutions + possible_words
 guesses = 6
 if guessword not in words:
     st.markdown("Please enter a valid 5-Letter Word")
+    guessword=""
 else:
     st.markdown("Your Word Is: " + guessword)
     st.markdown("Number of Guesses: " + str(guesses))
