@@ -3,6 +3,14 @@ import streamlit as st
 st.title("Wordle Solver")
 st.sidebar.title("Wordle Solver")
 
+st.sidebar.markdown("How It Works")
+st.sidebar.markdown("")
+st.sidebar.markdown("1. Enter a valid 5-Letter Word")
+st.sidebar.markdown("2. The solver takes turns guessing the word based on the frequency of letters of existing Wordle solutions.")
+st.sidebar.markdown("3. With each guess, the solver learns more about the word.")
+st.sidebar.markdown("4. It usually guesses it within the six tries")
+
+
 st.markdown("Enter a 5-Letter Word")
 guessword = st.text_input("My Word")
 guessword = guessword.lower()
