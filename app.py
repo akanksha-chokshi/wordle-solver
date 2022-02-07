@@ -21,7 +21,7 @@ guessword = st.text_input("My Word")
 guessword = guessword.lower()
 
 if guessword not in possible_solutions:
-    st.markdown("Sorry, your word is invalid. Please enter a valid word. ")
+    st.markdown("Please enter a valid word. ")
     guessword=""
 else:
     st.markdown("Your Word Is: " + guessword)
