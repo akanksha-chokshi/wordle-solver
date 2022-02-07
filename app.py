@@ -19,7 +19,7 @@ possible_words = ["aahed", "aalii", "aargh", "aarti", "abaca", "abaci", "abacs",
 
 guesses = 6
 if guessword not in possible_solutions:
-    st.markdown("Please enter a valid 5-Letter Word")
+    st.markdown("Sorry, your word is invalid. Please enter a valid word. ")
     guessword=""
 else:
     st.markdown("Your Word Is: " + guessword)
