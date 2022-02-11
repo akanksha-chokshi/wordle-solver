@@ -121,7 +121,7 @@ def show_results (green, yellow, grey):
 
 if guessword and submit: 
     with st.container():
-        col1, col2 = st.columns([2,2])
+        col1, col2 = st.columns([3,2])
         while (guesses > 0):  
             with col1:                  
                 st.write (" -- Guesses Left: " + str(guesses) + " -- ")
