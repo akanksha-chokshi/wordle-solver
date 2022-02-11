@@ -5,10 +5,10 @@ st.sidebar.title("Wordle Solver")
 
 st.sidebar.markdown("How It Works")
 st.sidebar.markdown("")
-st.sidebar.markdown("1. Enter a valid 5-Letter Word.")
+st.sidebar.markdown("1. Enter a valid 5-Letter Word")
 st.sidebar.markdown("2. The solver takes turns guessing the word based on the frequency of letters of existing Wordle solutions.")
 st.sidebar.markdown("3. With each guess, the solver learns more about the word.")
-st.sidebar.markdown("4. It usually guesses it within the six tries.")
+st.sidebar.markdown("4. It usually guesses it within the six tries")
 
 st.markdown("Enter a 5-Letter Word")
 guessword = st.text_input("My Word")
@@ -119,9 +119,10 @@ def show_results (green, yellow, grey):
     else:
         st.write("No Grey Letters")
 
+guessed = False
 if guessword and submit: 
     with st.container():
-        col1, col2 = st.columns([3,2])
+        col1, col2 = st.columns([2,2])
         while (guesses > 0):  
             with col1:                  
                 st.write (" -- Guesses Left: " + str(guesses) + " -- ")
@@ -130,6 +131,7 @@ if guessword and submit:
                 guesses = guesses - 1
                 st.write("")
                 if g == guessword:
+                    guessed = True
                     st.write("")
                     st.write("**Word Guessed!**")
                     st.write ("Game Over!")
@@ -140,6 +142,8 @@ if guessword and submit:
                         green, yellow, grey = check(g, guessword)
                         show_results (green, yellow, grey)
                 solutions = remove_solutions(solutions, g, green, yellow, grey)
+        if not guessed:
+            st.write("Wow, the solver was unable to guess your word! **You win!**")
 
 
 
