@@ -27,7 +27,6 @@ if submit:
         guessword = ""
     else:
         st.markdown("Your Word Is: " + guessword)
-        st.markdown(" -- Guesses Left: " + str(guesses) + " -- ")
         st.markdown(" ")
 
 solutions = []
@@ -67,11 +66,6 @@ def score_words (words, ordered_letters):
 
 def guess (solutions):
     guess = score_words(solutions, ordered_letters)[0]
-    st.success("Guess: " + guess)
-    if guess == guessword:
-        st.write("")
-        st.write("**Word Guessed!**")
-        return "Guessed"
     return guess
 
 def check (guess, guessword):
@@ -114,23 +108,38 @@ def remove_solutions (solutions, guess, green, yellow, grey):
 def show_results (green, yellow, grey):
     if green:
         st.write("Green: " + str(green))
+    else:
+        st.write("No Green Letters")
     if yellow:
         st.write("Yellow: " + str(yellow))
+    else:
+        st.write("No Yellow Letters")
     if grey:
         st.write("Grey: " + str(grey))
+    else:
+        st.write("No Grey Letters")
 
 if guessword and submit: 
-    while (guesses > 0):
-        g = guess (solutions)
-        guesses = guesses - 1
-        if g == "Guessed":
-            st.write ("Game Over!")
-            break
-        else:
-            green, yellow, grey = check(g, guessword)
-            show_results (green, yellow, grey)
-            st.write (" -- Guesses Left: " + str(guesses) + " -- ")
-            solutions = remove_solutions(solutions, g, green, yellow, grey)
+    with st.container():
+        col1, col2 = st.columns([2,2])
+        while (guesses > 0):  
+            with col1:                  
+                st.write (" -- Guesses Left: " + str(guesses) + " -- ")
+                g = guess (solutions)
+                st.success("Guess: " + g)
+                guesses = guesses - 1
+                st.write("")
+                if g == guessword:
+                    st.write("")
+                    st.write("**Word Guessed!**")
+                    st.write ("Game Over!")
+                    break
+                else:
+                    with col2:
+                        st.write("")
+                        green, yellow, grey = check(g, guessword)
+                        show_results (green, yellow, grey)
+                solutions = remove_solutions(solutions, g, green, yellow, grey)
 
 
 
