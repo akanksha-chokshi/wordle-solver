@@ -146,7 +146,7 @@ if guessword and submit:
         if not guessed:
             st.write("Wow, the solver was unable to guess your word! **You win!**")
 with st.expander("What I learned from this Project:"):
-    st.markdown("Hi")
+    st.markdown("This project was a fun exercise that helped me put a spin to a game I was really fascinated by. Fun Fact: I have used LATER as my starting word for every Wordle and been able to guess it eventually. So I guess the solver was right in picking it as a starting point. In terms of skills, this project did not give me knowledge of any specific libraries or tools, but it helped me break a solution into different parts and come up with an algorithm that learns the best possible solution at each stage, with the information it has.")
             
 
     
