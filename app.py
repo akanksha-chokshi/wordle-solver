@@ -10,8 +10,7 @@ st.sidebar.markdown("2. The solver takes turns guessing the word based on the fr
 st.sidebar.markdown("3. With each guess, the solver learns more about the word.")
 st.sidebar.markdown("4. It usually guesses it within the six tries.")
 
-st.markdown("Enter a 5-Letter Word")
-guessword = st.text_input("My Word")
+guessword = st.text_input("Enter a 5-Letter Word")
 submit = st.button("Guess My Word!")
 
 guessword = guessword.lower()
