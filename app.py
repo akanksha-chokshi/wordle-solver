@@ -10,7 +10,7 @@ st.sidebar.markdown(" - The solver makes guesses based on the frequency distribu
 st.sidebar.markdown(" - After every guess, the solver learns green (correctly placed), yellow (present but incorrectly placed) and grey (not present) letters.")
 st.sidebar.markdown(" - These clues will be displayed on the side of the guesses (in web) and at the bottom (in mobile) after every guess.")
 st.sidebar.markdown(" - The solver usually guesses the word within the allocated six tries.")
-st.sidebar.markdown(" - Can you enter a word it cannot guess? ")
+st.sidebar.markdown(" - **Can you enter a word it cannot guess?** ")
 
 guessword = st.text_input("Enter a 5-Letter Word")
 submit = st.button("Guess My Word!")
@@ -135,7 +135,7 @@ if guessword and submit:
                     guessed = True
                     st.write("")
                     st.write("**Word Guessed!**")
-                    st.write ("Game Over!")
+                    st.write ("Game Over! Try Again?")
                     break
                 else:
                     with col3:
