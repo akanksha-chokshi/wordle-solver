@@ -1,9 +1,8 @@
 import streamlit as st
 
 st.title("Wordle Solver")
-st.sidebar.title("Wordle Solver")
 
-st.sidebar.markdown("How It Works:")
+st.sidebar.title("How It Works:")
 st.sidebar.markdown("")
 st.sidebar.markdown("Just like the popular game Wordle, but reversed!")
 st.sidebar.markdown("In this game, you enter a 5-letter word for the solver to guess.")
