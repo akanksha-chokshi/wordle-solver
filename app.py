@@ -145,8 +145,6 @@ if guessword and submit:
                 solutions = remove_solutions(solutions, g, green, yellow, grey)
         if not guessed:
             st.write("Wow, the solver was unable to guess your word! **You win!**")
-else:
-    pass
             
 with st.expander("What I learned from this Project:"):
     st.write("This project was a fun exercise that helped me put a spin to a game I was really fascinated by. Fun Fact: I have used LATER as my starting word for every Wordle and been able to guess it eventually. So I guess the solver was right in picking it as a starting point.")
