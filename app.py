@@ -145,8 +145,8 @@ if guessword and submit:
                 solutions = remove_solutions(solutions, g, green, yellow, grey)
         if not guessed:
             st.write("Wow, the solver was unable to guess your word! **You win!**")
-        with st.expander("What I learned from this Project:"):
-            st.markdown("Hi")
+with st.expander("What I learned from this Project:"):
+    st.markdown("Hi")
             
 
     
