@@ -1,5 +1,7 @@
 # wordle-solver
 
+Check it out at: https://share.streamlit.io/akanksha-chokshi/wordle-solver/main/app.py
+
 **What is Wordle?**
 
 I’m sure you’ve heard of the popular game - Wordle. There’s a new 5 letter word released everyday, and players have 6 tries to guess it. At each guess, the game tells you which letters are ‘green’ (you guessed correctly and in the right position), which letters are ‘yellow’ (guessed correctly but in the wrong position) and ‘grey’ (not in the word at all). Based on these clues, you must make your next guess.
